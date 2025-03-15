@@ -37,6 +37,7 @@
             label3 = new Label();
             textBox2 = new TextBox();
             button1 = new Button();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             flowLayoutPanel1.BackColor = Color.OrangeRed;
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Margin = new Padding(4, 4, 4, 4);
+            flowLayoutPanel1.Margin = new Padding(4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(251, 516);
             flowLayoutPanel1.TabIndex = 0;
@@ -112,11 +113,21 @@
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(838, 43);
+            label4.Name = "label4";
+            label4.Size = new Size(24, 26);
+            label4.TabIndex = 7;
+            label4.Text = "X";
+            // 
+            // Login
             // 
             AutoScaleDimensions = new SizeF(12F, 26F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(887, 516);
+            Controls.Add(label4);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(label3);
@@ -126,8 +137,8 @@
             Controls.Add(label1);
             Controls.Add(flowLayoutPanel1);
             Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Margin = new Padding(4, 4, 4, 4);
-            Name = "Form1";
+            Margin = new Padding(4);
+            Name = "Login";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -144,5 +155,6 @@
         private Label label3;
         private TextBox textBox2;
         private Button button1;
+        private Label label4;
     }
 }

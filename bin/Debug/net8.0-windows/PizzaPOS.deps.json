@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PizzaPOS/1.0.0": {
+        "runtime": {
+          "PizzaPOS.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PizzaPOS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
