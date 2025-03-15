@@ -46,7 +46,7 @@
             label3 = new Label();
             label4 = new Label();
             button2 = new Button();
-            button3 = new Button();
+            SettingsBtn = new Button();
             label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -211,14 +211,15 @@
             button2.Text = "Print order";
             button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // SettingsBtn
             // 
-            button3.Location = new Point(200, 536);
-            button3.Name = "button3";
-            button3.Size = new Size(209, 41);
-            button3.TabIndex = 15;
-            button3.Text = "Set your prices";
-            button3.UseVisualStyleBackColor = true;
+            SettingsBtn.Location = new Point(200, 536);
+            SettingsBtn.Name = "SettingsBtn";
+            SettingsBtn.Size = new Size(209, 41);
+            SettingsBtn.TabIndex = 15;
+            SettingsBtn.Text = "Set your prices";
+            SettingsBtn.UseVisualStyleBackColor = true;
+            SettingsBtn.Click += button3_Click;
             // 
             // label5
             // 
@@ -235,7 +236,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1011, 599);
             Controls.Add(label5);
-            Controls.Add(button3);
+            Controls.Add(SettingsBtn);
             Controls.Add(button2);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -278,7 +279,7 @@
         private Label label3;
         private Label label4;
         private Button button2;
-        private Button button3;
+        private Button SettingsBtn;
         private Label label5;
     }
 }
