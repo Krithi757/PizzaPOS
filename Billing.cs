@@ -12,8 +12,10 @@ namespace PizzaPOS
 {
     public partial class Billing : Form
     {
+        Functions Con; 
         public Billing()
         {
+            Con = new Functions(); 
             InitializeComponent();
         }
 
@@ -37,6 +39,68 @@ namespace PizzaPOS
             Settimgs Obj = new Settimgs();
             Obj.Show();
             this.Hide();
+        }
+        int Key = 0;
+        int Price = 0; 
+
+        private void GetPrice(int Key)
+        {
+            string Pizza = "";
+            if (Key == 1)
+            {
+                Pizza = "Small";
+            }
+            else if (Key == 2)
+            {
+                Pizza = "Medium";
+            }
+            else if (Key == 3)
+            {
+                Pizza = "Large";
+            }
+            else if (Key == 4)
+            {
+                Pizza = "Extra Large";
+            }
+            string Query = "select * from PizzaTbl where Item = '{0}'";
+            Query = string.Format(Query, Pizza);
+            Price = Convert.ToInt32(Con.GetData(Query).Rows[0][1].ToString());
+        }
+        int n = 0;
+        string Items;
+        private void OrderBtn_Click(object sender, EventArgs e)
+        {
+            if (SmallBtn.Checked == true)
+            {
+                Key = 1;
+                Items = "Small Pizza";
+            }
+            else if (MediumBtn.Checked == true)
+            {
+                Key = 2;
+                Items = "Medium Pizza";
+            }
+            else if (LargeBtn.Checked == true)
+            {
+                Key = 3;
+                Items = "Large Pizza";
+            }
+            else if (ExtraLargeBtn.Checked == true)
+            {
+                Key = 4;
+                Items = "Extra Large Pizza";
+            }
+            GetPrice(Key);
+            int Qty = Convert.ToInt32(QtyTb.Text);
+            int total=Qty*Price;
+            DataGridViewRow newRow = new DataGridViewRow();
+            newRow.CreateCells(BillDGV);
+            newRow.Cells[0].Value = n + 1;
+            newRow.Cells[1].Value = Items;
+            newRow.Cells[2].Value = Price;
+            newRow.Cells[3].Value = QtyTb.Text;
+            newRow.Cells[4].Value = total;
+
         }
     }
 }

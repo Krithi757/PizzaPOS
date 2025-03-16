@@ -24,7 +24,7 @@ namespace PizzaPOS
             cmd.Connection = Con;
         }
 
-        private DataTable GetData(string Query)
+        public DataTable GetData(string Query)
         {
             dt = new DataTable();
             sda = new SqlDataAdapter(Query, ConStr);

@@ -28,10 +28,10 @@ namespace PizzaPOS
 
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
-            int Pr = Convert.ToInt32(PriceTb.Text);
             string Key; 
             try
             {
+                int Pr = Convert.ToInt32(PriceTb.Text);
                 if (PizzaCb.SelectedIndex == -1)
                 {
                     MessageBox.Show("Please Select A Pizza!!!");

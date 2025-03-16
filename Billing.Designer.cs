@@ -30,25 +30,25 @@
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
-            radioButton1 = new RadioButton();
+            SmallBtn = new RadioButton();
             label2 = new Label();
-            radioButton2 = new RadioButton();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
+            MediumBtn = new RadioButton();
+            LargeBtn = new RadioButton();
+            ExtraLargeBtn = new RadioButton();
+            OrderBtn = new Button();
+            BillDGV = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
-            textBox1 = new TextBox();
+            QtyTb = new TextBox();
             label3 = new Label();
             label4 = new Label();
             button2 = new Button();
             SettingsBtn = new Button();
             label5 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BillDGV).BeginInit();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -68,17 +68,17 @@
             label1.TabIndex = 1;
             label1.Text = "Pizza Ordering System";
             // 
-            // radioButton1
+            // SmallBtn
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(208, 145);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(83, 30);
-            radioButton1.TabIndex = 4;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Small";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            SmallBtn.AutoSize = true;
+            SmallBtn.Location = new Point(208, 145);
+            SmallBtn.Name = "SmallBtn";
+            SmallBtn.Size = new Size(83, 30);
+            SmallBtn.TabIndex = 4;
+            SmallBtn.TabStop = true;
+            SmallBtn.Text = "Small";
+            SmallBtn.UseVisualStyleBackColor = true;
+            SmallBtn.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // label2
             // 
@@ -89,57 +89,58 @@
             label2.TabIndex = 5;
             label2.Text = "Please Select A Pizza";
             // 
-            // radioButton2
+            // MediumBtn
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(208, 193);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(104, 30);
-            radioButton2.TabIndex = 6;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Medium";
-            radioButton2.UseVisualStyleBackColor = true;
+            MediumBtn.AutoSize = true;
+            MediumBtn.Location = new Point(208, 193);
+            MediumBtn.Name = "MediumBtn";
+            MediumBtn.Size = new Size(104, 30);
+            MediumBtn.TabIndex = 6;
+            MediumBtn.TabStop = true;
+            MediumBtn.Text = "Medium";
+            MediumBtn.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // LargeBtn
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(208, 238);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(83, 30);
-            radioButton3.TabIndex = 7;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Large";
-            radioButton3.UseVisualStyleBackColor = true;
+            LargeBtn.AutoSize = true;
+            LargeBtn.Location = new Point(208, 238);
+            LargeBtn.Name = "LargeBtn";
+            LargeBtn.Size = new Size(83, 30);
+            LargeBtn.TabIndex = 7;
+            LargeBtn.TabStop = true;
+            LargeBtn.Text = "Large";
+            LargeBtn.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // ExtraLargeBtn
             // 
-            radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(208, 286);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(137, 30);
-            radioButton4.TabIndex = 8;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Extra Large";
-            radioButton4.UseVisualStyleBackColor = true;
+            ExtraLargeBtn.AutoSize = true;
+            ExtraLargeBtn.Location = new Point(208, 286);
+            ExtraLargeBtn.Name = "ExtraLargeBtn";
+            ExtraLargeBtn.Size = new Size(137, 30);
+            ExtraLargeBtn.TabIndex = 8;
+            ExtraLargeBtn.TabStop = true;
+            ExtraLargeBtn.Text = "Extra Large";
+            ExtraLargeBtn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // OrderBtn
             // 
-            button1.Location = new Point(200, 446);
-            button1.Name = "button1";
-            button1.Size = new Size(209, 41);
-            button1.TabIndex = 9;
-            button1.Text = "Add to your order";
-            button1.UseVisualStyleBackColor = true;
+            OrderBtn.Location = new Point(200, 446);
+            OrderBtn.Name = "OrderBtn";
+            OrderBtn.Size = new Size(209, 41);
+            OrderBtn.TabIndex = 9;
+            OrderBtn.Text = "Add to your order";
+            OrderBtn.UseVisualStyleBackColor = true;
+            OrderBtn.Click += OrderBtn_Click;
             // 
-            // dataGridView1
+            // BillDGV
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
-            dataGridView1.Location = new Point(487, 114);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(500, 373);
-            dataGridView1.TabIndex = 10;
+            BillDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            BillDGV.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
+            BillDGV.Location = new Point(487, 114);
+            BillDGV.Name = "BillDGV";
+            BillDGV.RowHeadersWidth = 51;
+            BillDGV.Size = new Size(500, 373);
+            BillDGV.TabIndex = 10;
             // 
             // Column1
             // 
@@ -176,12 +177,12 @@
             Column5.Name = "Column5";
             Column5.Width = 125;
             // 
-            // textBox1
+            // QtyTb
             // 
-            textBox1.Location = new Point(200, 383);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(91, 31);
-            textBox1.TabIndex = 11;
+            QtyTb.Location = new Point(200, 383);
+            QtyTb.Name = "QtyTb";
+            QtyTb.Size = new Size(91, 31);
+            QtyTb.TabIndex = 11;
             // 
             // label3
             // 
@@ -240,21 +241,21 @@
             Controls.Add(button2);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(textBox1);
-            Controls.Add(dataGridView1);
-            Controls.Add(button1);
-            Controls.Add(radioButton4);
-            Controls.Add(radioButton3);
-            Controls.Add(radioButton2);
+            Controls.Add(QtyTb);
+            Controls.Add(BillDGV);
+            Controls.Add(OrderBtn);
+            Controls.Add(ExtraLargeBtn);
+            Controls.Add(LargeBtn);
+            Controls.Add(MediumBtn);
             Controls.Add(label2);
-            Controls.Add(radioButton1);
+            Controls.Add(SmallBtn);
             Controls.Add(label1);
             Controls.Add(flowLayoutPanel1);
             Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
             Name = "Billing";
             Text = "Billing";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BillDGV).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -263,19 +264,19 @@
 
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
-        private RadioButton radioButton1;
+        private RadioButton SmallBtn;
         private Label label2;
-        private RadioButton radioButton2;
-        private RadioButton radioButton3;
-        private RadioButton radioButton4;
-        private Button button1;
-        private DataGridView dataGridView1;
+        private RadioButton MediumBtn;
+        private RadioButton LargeBtn;
+        private RadioButton ExtraLargeBtn;
+        private Button OrderBtn;
+        private DataGridView BillDGV;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
-        private TextBox textBox1;
+        private TextBox QtyTb;
         private Label label3;
         private Label label4;
         private Button button2;
